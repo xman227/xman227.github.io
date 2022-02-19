@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-category-template-js",
+    "path": "/posts/DeepML",
+    "result": {"pageContext":{"currentCategory":"DeepML","categories":["All","DeepML","회고"],"edges":[{"node":{"id":"629d3adf-47a6-56ed-a2d6-ef26ff4d6eff","excerpt":"🌠 Tensor flow V2 라이브러리를 이용해 딥러닝 모델 생성하기 Tensor flow V2 버전에서 딥러닝 모델 작성 방법에는 크게 3가지가 있다. Sequential Functional : sequential 의 일반화된 개념 Model Subclassing : 클래스로 구현된 기존 모델을 상속받아 자기 모델 만들기 순차적으로 어떤 차이가 있고, 어떤 식으로 제작하는지 알아가보자. 1. Sequential Model epochs : 모델로 데이터를 학습할 횟수 batch_size : 데이터를 소분해 넣을 양 model = keras.Sequential() 을 활용하면 딥러닝 모델을 쌓아 나갈 수 있다. 입력부터 출력까지 순차적(시퀀셜) 으로 add 하면 된다. but, 모델의 입력과 출력이 여러개인 경우에는 적합하지 않다. (반드시 입력 1개 출력 1가지 여야 함) 2. Functional API model 에 ketas.Model 이 들어간다. 이것은 우리가 danse …","fields":{"slug":"/DML_keras/"},"frontmatter":{"categories":"DeepML","title":"파이썬으로 딥러닝 모델 제작하기","date":"February 19, 2022"}},"next":{"fields":{"slug":"/start/"}},"previous":null}]}},
+    "staticQueryHashes": ["1073350324","1956554647","2938748437"]}
