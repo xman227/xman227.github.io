@@ -64,71 +64,270 @@
         }
       }
     })
-  </script><title data-react-helmet="true">파이썬으로 딥러닝 모델 제작하기</title><meta data-react-helmet="true" name="viewport" content="initial-scale=1, width=device-width"/><meta data-react-helmet="true" property="og:title" content="파이썬으로 딥러닝 모델 제작하기"/><meta data-react-helmet="true" property="og:site_title" content="파이썬으로 딥러닝 모델 제작하기"/><meta data-react-helmet="true" name="description" content="🌠 Tensor flow V2 라이브러리를 이용해 딥러닝 모델 생성하기 Tensor flow V2 버전에서 딥러닝 모델 작성 방법에는 크게 3가지가 있다. Sequential Functional : sequential 의 일반화된 개념 Model Subclassing : 클래스로 구현된 기존 모델을 상속받아 자기 모델 만들기 순차적으로 어떤 차이가 있고, 어떤 식으로 제작하는지 알아가보자. 1. Sequential Model epochs : 모델로 데이터를 학습할 횟수 batch_size : 데이터를 소분해 넣을 양 model = keras.Sequential() 을 활용하면 딥러닝 모델을 쌓아 나갈 수 있다. 입력부터 출력까지 순차적(시퀀셜) 으로 add 하면 된다. but, 모델의 입력과 출력이 여러개인 경우에는 적합하지 않다. (반드시 입력 1개 출력 1가지 여야 함) 2. Functional API model 에 ketas.Model 이 들어간다. 이것은 우리가 danse …"/><meta data-react-helmet="true" property="og:description" content="🌠 Tensor flow V2 라이브러리를 이용해 딥러닝 모델 생성하기 Tensor flow V2 버전에서 딥러닝 모델 작성 방법에는 크게 3가지가 있다. Sequential Functional : sequential 의 일반화된 개념 Model Subclassing : 클래스로 구현된 기존 모델을 상속받아 자기 모델 만들기 순차적으로 어떤 차이가 있고, 어떤 식으로 제작하는지 알아가보자. 1. Sequential Model epochs : 모델로 데이터를 학습할 횟수 batch_size : 데이터를 소분해 넣을 양 model = keras.Sequential() 을 활용하면 딥러닝 모델을 쌓아 나갈 수 있다. 입력부터 출력까지 순차적(시퀀셜) 으로 add 하면 된다. but, 모델의 입력과 출력이 여러개인 경우에는 적합하지 않다. (반드시 입력 1개 출력 1가지 여야 함) 2. Functional API model 에 ketas.Model 이 들어간다. 이것은 우리가 danse …"/><meta data-react-helmet="true" property="og:author" content="하성민"/><meta data-react-helmet="true" property="og:image" content="/og-image.png"/><meta data-react-helmet="true" property="og:type" content="website"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2"/><style>@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:300;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:url(/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:300;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc-.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:url(/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxM.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc-.woff) format("woff")}</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link as="script" rel="preload" href="/webpack-runtime-5e4100c8c88d26cea74d.js"/><link as="script" rel="preload" href="/framework-0e1bf37de02f7cef2174.js"/><link as="script" rel="preload" href="/app-5199f4bcb719e25b45ed.js"/><link as="script" rel="preload" href="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-3528d048b96f92ca0d99.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-js-ef83b594aa693e649d30.js"/><link as="fetch" rel="preload" href="/page-data/start/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1073350324.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1956554647.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2938748437.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="page-wrapper"><header class="page-header-wrapper"><div class="page-header"><div class="front-section"><a class="link" href="/">Oha&#x27;s</a></div><div class="trailing-section"><a class="link" href="/about">about</a><a class="link" href="/posts">posts</a><div class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1l6di18" role="combobox" aria-expanded="false"><div class="search-input-wrapper"><div class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root search-input css-feqhe6"><div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-11tfndm"><input type="text" aria-invalid="false" autoComplete="off" value="" class="MuiInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-mnn31" aria-autocomplete="list" autoCapitalize="none" spellcheck="false"/><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium search-icon css-vubbuv" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="SearchOutlinedIcon"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></div></div></div></div></div></div></header><main class="page-content"><header class="post-header"><div class="emoji">🌕  🚶🏽‍♂️...</div><div class="info"><div class="categories"><a class="category" href="/posts/회고">회고</a></div></div><h1 class="title">저를 찾아오신 분들께 드리는 말</h1><div class="info"><div class="author">posted by <strong>하성민</strong>,</div> <!-- -->February 14, 2022</div></header><div class="post-content"><div class="markdown"><h2 id="-소개" style="position:relative;"><a href="#-%EC%86%8C%EA%B0%9C" aria-label=" 소개 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>👋 소개</h2>
-<p>안녕하세요, 모든 사람들의 더 나은 삶과 행복을 꿈꾸는 Oha 입니다!</p>
-<p>저는 2021년 12월부터<br>
-모두의 연구소 산하기관 “Aiffel” 에서<br>
-파이썬과 이를 이용한 딥러닝 인공지능에 대해 배우고 있습니다.</p>
-<p>인공지능 관련 라이브러리 Tensorflow를 주로 사용합니다.</p>
-<p>저는 전혀 코딩을 접해보지 않은 <strong>비전공자</strong> 입니다.<br>
-경영학과를 재학 중입니다.</p>
-<p>코딩과 프로그래밍에 대한 지식들이 일반사람들에게 널리 퍼지면서,<br>
-개발 분야로의 꿈과 열정을 가지게 된 분들이 많아진 것 같습니다.</p>
-<p>저 또한 사람을 돕는 인공지능에 매력을 느껴<br>
-더 나은 기술 더 나은 삶을 만들기 위해 공부중입니다.</p>
-<h2 id="-그러나-" style="position:relative;"><a href="#-%EA%B7%B8%EB%9F%AC%EB%82%98-" aria-label=" 그러나  permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🖐 그러나 ,</h2>
-<p>요즘 다양한 국비지원교육과 마케팅이 활발해지면서,<br>
-개발과 프로그래밍에 대한 막연한 환상을 품는 학생이 종종 보입니다.</p>
-<p>인터넷 상에서 되풀이되는 모든 말들이 거짓이라 할 수는 없지만,<br>
-개발과 코딩을 접하지 않아본 사람들이 분별있는 판단을 하기엔</p>
-<p>제대로 된 지식을 구하기가 어렵습니다 !</p>
-<p>비전공 분야에서 인공지능을 배우는 경영학도로서,</p>
-<p>정말 확실한 비전을 가지고 계신 분들께는<br>
-용기와 확신을,</p>
-<p>막연히 고민중이거나 탐색중인 분들께는<br>
-비판과 현실을,</p>
-<p>전해드리겠습니다.</p>
-<h2 id="-방향성" style="position:relative;"><a href="#-%EB%B0%A9%ED%96%A5%EC%84%B1" aria-label=" 방향성 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🌈 방향성</h2>
-<p>저는 이미 개인 네이버 블로그를 운영하고 있습니다.<br>
-그러나 진행하는 인공지능 학습의 전문성을 고려해서<br>
-제 지식과 공부자료를 공유하는 독립된 공간을 만들고 싶었습니다.</p>
-<p>때문에 이 공간에는 난해하고 복잡한 딥러닝 인공지능 정보와 지식을<br>
-그리고 그에 필요한 기본 수학과 통계, 파이썬 지식을</p>
-<p>초보자였던 (아직도 초보자지만) 시절의 나도 이해할 수 있도록<br>
-제 감성에 맞게 부드럽고 편안히 기술해보도록 하겠습니다.</p>
-<p>다시 한 번 정리해 보겠습니다.</p>
+  </script><title data-react-helmet="true">VGG-16</title><meta data-react-helmet="true" name="viewport" content="initial-scale=1, width=device-width"/><meta data-react-helmet="true" property="og:title" content="VGG-16"/><meta data-react-helmet="true" property="og:site_title" content="VGG-16"/><meta data-react-helmet="true" name="description" content="딥러닝모델 VGG-16  🚶🏽‍♂️ 오늘 구현한 모델은 VGG-16 이다. 목차 데이터 불러오기 VGG-16 생성 본인의 과업에 맞게 VGG-16 개선 이 모델은 미국에서 진행한 이미지 인식 대회 ILSVRC 에서 2014년 준우승을 한 모델이다! (물론 지금은 더 좋은게 많이 있다) 하지만 계속 발전되는 Deep Learning 모델을 이해하기 위해선 기본적인 구조를 갖춘 VGG-16 의 모델 이해가 필요하다. 본 게시글에서는 VGG-16 를 Tensorflow 라이브러리에서 불러와 사용하는 방법을 제시한다. 모델 사용에는 tensorflow 실습 데이터인
+ 를 사용했다.  VGG 16 불러오기 18층으로 구성되어 있다. 해당 사이트에서 전문적인 내용을 다룬다. 자세한 내용을 보시려면 이 모델은 해당 그림을 구현하고 있다. 그림의 세 번째 파란상자를 보면 fully nected 라고 되어있는데, fully connected layer 의 오타이다. 순방향 신경망을 의미한다. 18층으로 …"/><meta data-react-helmet="true" property="og:description" content="딥러닝모델 VGG-16  🚶🏽‍♂️ 오늘 구현한 모델은 VGG-16 이다. 목차 데이터 불러오기 VGG-16 생성 본인의 과업에 맞게 VGG-16 개선 이 모델은 미국에서 진행한 이미지 인식 대회 ILSVRC 에서 2014년 준우승을 한 모델이다! (물론 지금은 더 좋은게 많이 있다) 하지만 계속 발전되는 Deep Learning 모델을 이해하기 위해선 기본적인 구조를 갖춘 VGG-16 의 모델 이해가 필요하다. 본 게시글에서는 VGG-16 를 Tensorflow 라이브러리에서 불러와 사용하는 방법을 제시한다. 모델 사용에는 tensorflow 실습 데이터인
+ 를 사용했다.  VGG 16 불러오기 18층으로 구성되어 있다. 해당 사이트에서 전문적인 내용을 다룬다. 자세한 내용을 보시려면 이 모델은 해당 그림을 구현하고 있다. 그림의 세 번째 파란상자를 보면 fully nected 라고 되어있는데, fully connected layer 의 오타이다. 순방향 신경망을 의미한다. 18층으로 …"/><meta data-react-helmet="true" property="og:author" content="하성민"/><meta data-react-helmet="true" property="og:image" content="/og-image.png"/><meta data-react-helmet="true" property="og:type" content="website"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2"/><style>@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:300;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:url(/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:300;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc-.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:url(/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxM.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc-.woff) format("woff")}</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link as="script" rel="preload" href="/webpack-runtime-5e4100c8c88d26cea74d.js"/><link as="script" rel="preload" href="/framework-0e1bf37de02f7cef2174.js"/><link as="script" rel="preload" href="/app-5199f4bcb719e25b45ed.js"/><link as="script" rel="preload" href="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-3528d048b96f92ca0d99.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-js-ef83b594aa693e649d30.js"/><link as="fetch" rel="preload" href="/page-data/DML_AI2/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1073350324.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1956554647.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2938748437.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="page-wrapper"><header class="page-header-wrapper"><div class="page-header"><div class="front-section"><a class="link" href="/">Oha&#x27;s</a></div><div class="trailing-section"><a class="link" href="/about">about</a><a class="link" href="/posts">posts</a><div class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1l6di18" role="combobox" aria-expanded="false"><div class="search-input-wrapper"><div class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root search-input css-feqhe6"><div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-11tfndm"><input type="text" aria-invalid="false" autoComplete="off" value="" class="MuiInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-mnn31" aria-autocomplete="list" autoCapitalize="none" spellcheck="false"/><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium search-icon css-vubbuv" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="SearchOutlinedIcon"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></div></div></div></div></div></div></header><main class="page-content"><header class="post-header"><div class="emoji">😁</div><div class="info"><div class="categories"><a class="category" href="/posts/beginner">beginner</a></div></div><h1 class="title">VGG-16</h1><div class="info"><div class="author">posted by <strong>하성민</strong>,</div> <!-- -->April 21, 2022</div></header><div class="post-content"><div class="markdown"><h1 id="span-stylebackground-color-fff5b1딥러닝모델-vgg-16--️span" style="position:relative;"><a href="#span-stylebackground-color-fff5b1%EB%94%A5%EB%9F%AC%EB%8B%9D%EB%AA%A8%EB%8D%B8-vgg-16--%EF%B8%8Fspan" aria-label="span stylebackground color fff5b1딥러닝모델 vgg 16  ️span permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span style='background-color: #fff5b1'>딥러닝모델 VGG-16  🚶🏽‍♂️</span></h1>
+<p>오늘 구현한 모델은 VGG-16 이다.</p>
+<h2 id="목차" style="position:relative;"><a href="#%EB%AA%A9%EC%B0%A8" aria-label="목차 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>목차</h2>
 <ol>
-<li>딥러닝 공부내용 (모델구조, 기초단어, 논문리뷰 등)</li>
-<li>파이썬 (배열 라이브러리 pandas, 시각화 라이브러리 matplotlib, 알고리즘 문제풀이 등)</li>
-<li>수학 (모델 이해에 필요한 미적분, 통계, 행렬 지식 등)</li>
-<li>회고 (해당의 것들을 진행하면서 느끼는 점. 말하고 싶은 점)</li>
+<li>데이터 불러오기</li>
+<li>VGG-16 생성</li>
+<li>본인의 과업에 맞게 VGG-16 개선</li>
 </ol>
-<h2 id="-블로그-제작-지원" style="position:relative;"><a href="#-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EC%9E%91-%EC%A7%80%EC%9B%90" aria-label=" 블로그 제작 지원 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>👍 블로그 제작 지원</h2>
-<p>이 블로그는 깃허브 repository 를 통해 gatsby 테마로 제작하였습니다.<br>
-<a href="https://github.com/zoomkoding/zoomkoding-gatsby-blog">zoomcoding</a> 님의 자료를 참고해만들었습니다.<br>
-좋은 자료를 공유해주신 zoomcoding 님께 감사의 말씀을 전합니다!</p>
-<h3 id="-문의" style="position:relative;"><a href="#-%EB%AC%B8%EC%9D%98" aria-label=" 문의 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>💡 문의</h3>
-<p>궁금하신 점이 있으시다면 제 이메일로 문의주시거나 따로 운영하는 헬스 블로그 <a href="https://blog.naver.com/bulkup-star_maybe">Oha’s Fitness</a> 에 댓글로 남겨주시면 최대한 빠르게 답변 드리도록 하겠습니다!🙋‍♂️</p>
-<blockquote>
-<p>👉 이메일 : <a href="mailto:x22z@naver.com">x22z@naver.com</a>
-👉 깃허브 : <a href="https://github.com/xman227">https://github.com/xman227</a></p>
-</blockquote>
+<p>이 모델은 미국에서 진행한 이미지 인식 대회 ILSVRC 에서<br>
+2014년 준우승을 한 모델이다! (물론 지금은 더 좋은게 많이 있다)</p>
+<p>하지만 계속 발전되는 Deep Learning 모델을 이해하기 위해선<br>
+기본적인 구조를 갖춘 VGG-16 의 모델 이해가 필요하다.</p>
+<p>본 게시글에서는 VGG-16 를 Tensorflow 라이브러리에서 불러와<br>
+사용하는 방법을 제시한다.</p>
+<p>모델 사용에는 tensorflow 실습 데이터인
+<code class="language-text">cats vs dogs</code> 를 사용했다.</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+<span class="token keyword">import</span> tensorflow_datasets <span class="token keyword">as</span> tfds
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token operator">%</span>matplotlib inline
+<span class="token operator">%</span>config InlineBackend<span class="token punctuation">.</span>figure_format <span class="token operator">=</span> <span class="token string">'retina'</span>
+
+
+
+<span class="token punctuation">(</span>raw_train<span class="token punctuation">,</span> raw_validation<span class="token punctuation">,</span> raw_test<span class="token punctuation">)</span><span class="token punctuation">,</span> metadata <span class="token operator">=</span> tfds<span class="token punctuation">.</span>load<span class="token punctuation">(</span>
+    <span class="token string">'cats_vs_dogs'</span><span class="token punctuation">,</span>
+    split<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'train[:80%]'</span><span class="token punctuation">,</span> <span class="token string">'train[80%:90%]'</span><span class="token punctuation">,</span> <span class="token string">'train[90%:]'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    with_info<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+    as_supervised<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+IMG_SIZE <span class="token operator">=</span> <span class="token number">160</span> <span class="token comment"># 리사이징할 이미지의 크기</span>
+
+<span class="token keyword">def</span> <span class="token function">format_example</span><span class="token punctuation">(</span>image<span class="token punctuation">,</span> label<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    image <span class="token operator">=</span> tf<span class="token punctuation">.</span>cast<span class="token punctuation">(</span>image<span class="token punctuation">,</span> tf<span class="token punctuation">.</span>float32<span class="token punctuation">)</span>  <span class="token comment"># image=float(image)같은 타입캐스팅의  텐서플로우 버전입니다.</span>
+    image <span class="token operator">=</span> <span class="token punctuation">(</span>image<span class="token operator">/</span><span class="token number">127.5</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span> <span class="token comment"># 픽셀값의 scale 수정</span>
+    image <span class="token operator">=</span> tf<span class="token punctuation">.</span>image<span class="token punctuation">.</span>resize<span class="token punctuation">(</span>image<span class="token punctuation">,</span> <span class="token punctuation">(</span>IMG_SIZE<span class="token punctuation">,</span> IMG_SIZE<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> image<span class="token punctuation">,</span> label
+
+train <span class="token operator">=</span> raw_train<span class="token punctuation">.</span><span class="token builtin">map</span><span class="token punctuation">(</span>format_example<span class="token punctuation">)</span>
+validation <span class="token operator">=</span> raw_validation<span class="token punctuation">.</span><span class="token builtin">map</span><span class="token punctuation">(</span>format_example<span class="token punctuation">)</span>
+test <span class="token operator">=</span> raw_test<span class="token punctuation">.</span><span class="token builtin">map</span><span class="token punctuation">(</span>format_example<span class="token punctuation">)</span>
+</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">[1mDownloading and preparing dataset 786.68 MiB (download: 786.68 MiB, generated: Unknown size, total: 786.68 MiB) to /aiffel/tensorflow_datasets/cats_vs_dogs/4.0.0...[0m
+
+
+
+Dl Completed...: 0 url [00:00, ? url/s]
+
+
+
+Dl Size...: 0 MiB [00:00, ? MiB/s]
+
+
+
+Generating splits...:   0%|          | 0/1 [00:00&lt;?, ? splits/s]
+
+
+
+Generating train examples...:   0%|          | 0/23262 [00:00&lt;?, ? examples/s]
+
+
+WARNING:absl:1738 images were corrupted and were skipped
+
+
+
+Shuffling cats_vs_dogs-train.tfrecord...:   0%|          | 0/23262 [00:00&lt;?, ? examples/s]
+
+
+[1mDataset cats_vs_dogs downloaded and prepared to /aiffel/tensorflow_datasets/cats_vs_dogs/4.0.0. Subsequent calls will reuse this data.[0m</code></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+get_label_name <span class="token operator">=</span> metadata<span class="token punctuation">.</span>features<span class="token punctuation">[</span><span class="token string">'label'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>int2str
+
+<span class="token keyword">for</span> idx<span class="token punctuation">,</span> <span class="token punctuation">(</span>image<span class="token punctuation">,</span> label<span class="token punctuation">)</span> <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>train<span class="token punctuation">.</span>take<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> idx<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span>
+    image <span class="token operator">=</span> <span class="token punctuation">(</span>image <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span>
+    plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>image<span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'label </span><span class="token interpolation"><span class="token punctuation">{</span>label<span class="token punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">{</span>get_label_name<span class="token punctuation">(</span>label<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>axis<span class="token punctuation">(</span><span class="token string">'off'</span><span class="token punctuation">)</span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 47.77777777777777%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAADNUlEQVQozwEqA9X8AFVQQz6LiGA8iYpjLaqATg9FOB5BLzYROS4uETd1hUwNboNbOLayrzyCiIw9NT09D11FEC1aSiFAXUsbO2dNDRdmZWghR0RBQVdRTzx/fX0uAGdgVf6smnL/uKV8xI1tS2pkSCr/OzQe9l8/IexxgURcioJW6ryGYveWe2j/NjUyZyIZA8toVy/8eWY//29dN4SNiIWhfHhz/29rZ/aVk5PkAF5VS/88Jx7/d2VMyW5vN25kQCP/ayoh/l09IPJgcTtgiHde8p1/b/+Nblf/hndsaxgdIdJPRjj/f3Zp/3FnV4kuLSimGx8Z/zM2Lf1yZFXrAHZnVf9hVTb/ZFtC1WZoNHRiPyX/fzQd/1NFHv9ueklllaKC/3iFaP+PkIL/xsK7cVJELN10Xz3/l4l3/2deUpFmYV2vendz/5GJhP+WiID4AFtURmpUWkFrQkc8UlBPJy48MBxsXDwgZ2lYL2NsdU8oj6N8Ymh/P2d2gWhryMa4LH1SD1WDYitpdmA4blpOMjjPxcJEw7m1brSsqmeqoqFhAP/60AD///cA28a0AElFKAD/4HcA//+xAKeMTgBFTj4A///lAP//kgDb3rYApqefANafTQD//9UA48OPAHRrVQD/+dkA////AP///wDEuKcAALOPdsLovqfCyJR/lkQ4OkxZUEbGbGVavDo2N7EhJTRBZGZtsqOMdr6Xh3m/aHKGSjo0MJqvrq7BW1lWxz4+QWNHRTh4Xlg8yVBJLLxCPSerAJ9/a/+PeW3/uJCB04RsTnSef1D/n4ts/4tzUP8vLTBlbniF/cazoP+oloT/ZHCAcW1nZNyUiYb/Z2Jf/0xLS5BbVTOvT0s0/1tUOP9IQir3AJqQg/94dW//t6uey6OXgW+5nm3/sZNl/52JbPVDRlJganiO9KGbmP+IgXz/X2lxbGVcVtN3bWj/cGtl/19cWYo4NCGofn53/2xtZ/9IQi/tAK+gjuWqoJLmy72nsHl+gGChjnHprZNq3oSGgtReZm1UeX+P032Dit+AhYjlgoWHXVxVT7d1cGnke3Rs7HFqY3hBQjaRmpqV7cvIw91GQTHOUnqDylKzWK4AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="png"
+        title="png"
+        src="/static/1271a3703b5b224b0557b0d74541dd9c/37523/output_2_0.png"
+        srcset="/static/1271a3703b5b224b0557b0d74541dd9c/e9ff0/output_2_0.png 180w,
+/static/1271a3703b5b224b0557b0d74541dd9c/f21e7/output_2_0.png 360w,
+/static/1271a3703b5b224b0557b0d74541dd9c/37523/output_2_0.png 720w,
+/static/1271a3703b5b224b0557b0d74541dd9c/302a4/output_2_0.png 1080w,
+/static/1271a3703b5b224b0557b0d74541dd9c/ee3fb/output_2_0.png 1144w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3 id="vgg-16-불러오기" style="position:relative;"><a href="#vgg-16-%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0" aria-label="vgg 16 불러오기 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>VGG 16 불러오기</h3>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">feature_batch <span class="token operator">=</span> base_model<span class="token punctuation">(</span>image_batch<span class="token punctuation">)</span>
+feature_batch<span class="token punctuation">.</span>shape</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">TensorShape([32, 5, 5, 512])</code></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">base_model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Model: "vgg16"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 160, 160, 3)]     0         
+_________________________________________________________________
+block1_conv1 (Conv2D)        (None, 160, 160, 64)      1792      
+_________________________________________________________________
+block1_conv2 (Conv2D)        (None, 160, 160, 64)      36928     
+_________________________________________________________________
+block1_pool (MaxPooling2D)   (None, 80, 80, 64)        0         
+_________________________________________________________________
+block2_conv1 (Conv2D)        (None, 80, 80, 128)       73856     
+_________________________________________________________________
+block2_conv2 (Conv2D)        (None, 80, 80, 128)       147584    
+_________________________________________________________________
+block2_pool (MaxPooling2D)   (None, 40, 40, 128)       0         
+_________________________________________________________________
+block3_conv1 (Conv2D)        (None, 40, 40, 256)       295168    
+_________________________________________________________________
+block3_conv2 (Conv2D)        (None, 40, 40, 256)       590080    
+_________________________________________________________________
+block3_conv3 (Conv2D)        (None, 40, 40, 256)       590080    
+_________________________________________________________________
+block3_pool (MaxPooling2D)   (None, 20, 20, 256)       0         
+_________________________________________________________________
+block4_conv1 (Conv2D)        (None, 20, 20, 512)       1180160   
+_________________________________________________________________
+block4_conv2 (Conv2D)        (None, 20, 20, 512)       2359808   
+_________________________________________________________________
+block4_conv3 (Conv2D)        (None, 20, 20, 512)       2359808   
+_________________________________________________________________
+block4_pool (MaxPooling2D)   (None, 10, 10, 512)       0         
+_________________________________________________________________
+block5_conv1 (Conv2D)        (None, 10, 10, 512)       2359808   
+_________________________________________________________________
+block5_conv2 (Conv2D)        (None, 10, 10, 512)       2359808   
+_________________________________________________________________
+block5_conv3 (Conv2D)        (None, 10, 10, 512)       2359808   
+_________________________________________________________________
+block5_pool (MaxPooling2D)   (None, 5, 5, 512)         0         
+=================================================================
+Total params: 14,714,688
+Trainable params: 14,714,688
+Non-trainable params: 0
+_________________________________________________________________</code></pre></div>
+<p>18층으로 구성되어 있다.</p>
+<p>해당 사이트에서 전문적인 내용을 다룬다.</p>
+<p><a href="https://neurohive.io/en/popular-networks/vgg16/">자세한 내용을 보시려면</a></p>
+<p>이 모델은 해당 그림을 구현하고 있다.</p>
+<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 565px; ">
+      <span class="gatsby-resp-image-background-image" style="padding-bottom: 62.22222222222222%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABJ0AAASdAHeZh94AAABuElEQVQoz52Sz2sTQRzF9w8RwZungp68efMP8FgPgheh/4Jn/QcEoSIowYOtpb0IHryp/4ERTZO02R8m7e5kszvZndnZbPKRGdtQYirUBw+WZebNe9/v88qypNKKUSyYyClRGJBNJlRVhcVisbgSPXtpvljwZPs9h/1j0vGYc1xVbCm48+kLjzcf4R92KIoCmWUopf7PYW+YsvX0GR933jqBcRTS63bJZb4UXcX55XXwPnz9zN2Hm/w88qE2jIKAcRTR7XQIBgNSIUjTFCkldV0j85wsy1yS+Xzu/jVN42i/vdZBi437D+gdBzTFFDEcIuOY0WhEJQThYIDv+0zC0D1w1O9TCkFezTjNC6IkJc6nyCx1D3mt/V1ubtzmx/c2GOMEsyQmEQJTFGil/kQ/c2HJWdx1ob3ddwdcv3aDdvsbKMWvIKDS2tm/OKfKGFclS6U1xpi1S/Oev3jFrTv38IPIubAzWleb/OSUJI6JogiRJGit1wu+fLPH9us9pjLDmPrSqsiyJAxDR7uky2rldfsBclogROK2tnpg6XbeoLVyo/hXP72L8VYPWlgB68ZGnM1mf/VwVfA3ueuPgaIpqCoAAAAASUVORK5CYII='); background-size: cover; display: block;"></span>
+  <img class="gatsby-resp-image-image" alt="VGG" title="VGG" src="/static/70208de06e060390432303c3020768e8/07eba/VGG.png" srcset="/static/70208de06e060390432303c3020768e8/e9ff0/VGG.png 180w,
+/static/70208de06e060390432303c3020768e8/f21e7/VGG.png 360w,
+/static/70208de06e060390432303c3020768e8/07eba/VGG.png 565w" sizes="(max-width: 565px) 100vw, 565px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy" decoding="async">
+    </span>
+<p>그림의 세 번째 파란상자를 보면 fully nected 라고 되어있는데,<br>
+fully connected layer 의 오타이다. 순방향 신경망을 의미한다.</p>
+<p>18층으로 구성되어있으나 VGG-16 인 이유는<br>
+convolution layer 와 fully connected layer 만 포함했기 때문이다.<br>
+이 두 개의 총 합은 16개이다.</p>
+<p>현재 파이썬에 불러온 모델 상에는
+마지막 maxfooling 까지만 구현되어있다.</p>
+<p>때문에 마지막 네 개의 층을 직접 도입해보기로 하자!</p>
+<h3 id="vgg-16-개선" style="position:relative;"><a href="#vgg-16-%EA%B0%9C%EC%84%A0" aria-label="vgg 16 개선 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>VGG-16 개선</h3>
+<hr>
+<p>마지막 layer 까지 제공해주지 않는 이유는<br>
+우리가 입력하는 input 데이터에 따라 output 데이터도<br>
+달라지기 때문이다.</p>
+<p>마지막 layer 인 Dense layer (Fully connected layer) 에 넣어주기 위해서는 input data 를 Flatten 시킨 후 입력하여야 한다.</p>
+<p>우리 shape 는 32,5,5,512 라서 이거 한줄로 만들어줄건데</p>
+<p>아래는 Flatten의 예시이다.</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+image <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+flattened_image <span class="token operator">=</span> image<span class="token punctuation">.</span>flatten<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Original image:\n"</span><span class="token punctuation">,</span> image<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Original image shape:"</span><span class="token punctuation">,</span> image<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Flattened image:\n"</span><span class="token punctuation">,</span> flattened_image<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Flattened image shape:"</span><span class="token punctuation">,</span> flattened_image<span class="token punctuation">.</span>shape<span class="token punctuation">)</span></code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Original image:
+ [[1 2]
+ [3 4]]
+Original image shape: (2, 2)
+
+Flattened image:
+ [1 2 3 4]
+Flattened image shape: (4,)</code></pre></div>
+<p>이처럼 차원이 존재하는 배열데이터를 한 줄로<br>
+이어준다.</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"></code></pre></div>
+<p>아 근데 이거 말고 더 좋은게 있데</p>
+<p>그게 바로 Global Average Pooling</p>
+<p>3차원의 tensor 가 있을때 (예를 들어, 가로, 세로, 채널)<br>
+겹겹이 쌓여있는 2차원 배열의 평균을 구한 후 하나로 축소하는 방법</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">global_average_layer <span class="token operator">=</span> tf<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers<span class="token punctuation">.</span>GlobalAveragePooling2D<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># global Average 사용</span>
+
+feature_batch_average <span class="token operator">=</span> global_average_layer<span class="token punctuation">(</span>feature_batch<span class="token punctuation">)</span>
+<span class="token comment">#만든 glo aver 를 이어 붙이기</span>
+
+dense_layer <span class="token operator">=</span> tf<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers<span class="token punctuation">.</span>Dense<span class="token punctuation">(</span><span class="token number">512</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span>
+prediction_layer <span class="token operator">=</span> tf<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers<span class="token punctuation">.</span>Dense<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'softmax'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># feature_batch_averag가 dense_layer를 거친 결과가 다시 prediction_layer를 거치게 되면</span>
+prediction_batch <span class="token operator">=</span> prediction_layer<span class="token punctuation">(</span>dense_layer<span class="token punctuation">(</span>feature_batch_average<span class="token punctuation">)</span><span class="token punctuation">)</span>  
+<span class="token keyword">print</span><span class="token punctuation">(</span>prediction_batch<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+<span class="token comment"># 사용</span></code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">(32, 2)</code></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">base_model<span class="token punctuation">.</span>trainable <span class="token operator">=</span> <span class="token boolean">False</span>
+
+model <span class="token operator">=</span> tf<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>Sequential<span class="token punctuation">(</span><span class="token punctuation">[</span>
+  base_model<span class="token punctuation">,</span>
+  global_average_layer<span class="token punctuation">,</span>
+  dense_layer<span class="token punctuation">,</span>
+  prediction_layer
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre></div>
+<p>이게 최종 모델이다.</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+vgg16 (Functional)           (None, 5, 5, 512)         14714688  
+_________________________________________________________________
+global_average_pooling2d (Gl (None, 512)               0         
+_________________________________________________________________
+dense (Dense)                (None, 512)               262656    
+_________________________________________________________________
+dense_1 (Dense)              (None, 2)                 1026      
+=================================================================
+Total params: 14,978,370
+Trainable params: 263,682
+Non-trainable params: 14,714,688
+_________________________________________________________________</code></pre></div>
+<p>VGG16 모델 밑으로 Flatten(Global_average), Dense 레이어 2개가<br>
+들어갔다.</p>
+<p>모델의 사용은 다음 게시글에 이어서 쓰도록 한다.</p>
 <div class="table-of-contents">
 <ul>
 <li>
-<p><a href="#-%EC%86%8C%EA%B0%9C">👋 소개</a></p>
-</li>
-<li>
-<p><a href="#-%EA%B7%B8%EB%9F%AC%EB%82%98-">🖐 그러나 ,</a></p>
-</li>
-<li>
-<p><a href="#-%EB%B0%A9%ED%96%A5%EC%84%B1">🌈 방향성</a></p>
-</li>
-<li>
-<p><a href="#-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EC%9E%91-%EC%A7%80%EC%9B%90">👍 블로그 제작 지원</a></p>
+<p><a href="#%EB%AA%A9%EC%B0%A8">목차</a></p>
 <ul>
-<li><a href="#-%EB%AC%B8%EC%9D%98">💡 문의</a></li>
+<li><a href="#vgg-16-%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0">VGG 16 불러오기</a></li>
+<li><a href="#vgg-16-%EA%B0%9C%EC%84%A0">VGG-16 개선</a></li>
 </ul>
 </li>
 </ul>
-</div></div></div><div class="post-navigator"><div class="post-navigator-card-wrapper"></div><div class="post-navigator-card-wrapper"><a class="post-card next" href="/DML_keras/"><div class="direction">다음 글</div><div class="title">파이썬으로 딥러닝 모델 제작하기</div></a></div></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2022<!-- --> <a href="https://github.com/xman227">하성민</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer><div class="dark-mode-button-wrapper"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium dark-mode-button css-1yxmbwk" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge dark-mode-icon css-6flbmm" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="DarkModeIcon"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"></path></svg></button></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/start/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-cd840d73727c2e366b63.js"],"app":["/app-5199f4bcb719e25b45ed.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-3c26d4b7e3608ed0ece4.js"],"component---src-pages-404-js":["/component---src-pages-404-js-4917da7ef5b541e98a81.js"],"component---src-pages-about-js":["/component---src-pages-about-js-b5804eba3d16afcb3700.js"],"component---src-pages-index-js":["/component---src-pages-index-js-bc882cd03f70c89c8148.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-ef83b594aa693e649d30.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-fea460fedd50cffb10cd.js"]};/*]]>*/</script><script src="/polyfill-cd840d73727c2e366b63.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-ef83b594aa693e649d30.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-3528d048b96f92ca0d99.js" async=""></script><script src="/app-5199f4bcb719e25b45ed.js" async=""></script><script src="/framework-0e1bf37de02f7cef2174.js" async=""></script><script src="/webpack-runtime-5e4100c8c88d26cea74d.js" async=""></script></body></html>
+</div>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"></code></pre></div></div></div><div class="post-navigator"><div class="post-navigator-card-wrapper"><a class="post-card prev" href="/NLP_3/"><div class="direction">이전 글</div><div class="title">NLP 전처리 필수 Vecorize</div></a></div><div class="post-navigator-card-wrapper"><a class="post-card next" href="/DML_AI1/"><div class="direction">다음 글</div><div class="title">인공지능 기초 사진 분류 프로그램 맛보기</div></a></div></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2022<!-- --> <a href="https://github.com/xman227">하성민</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer><div class="dark-mode-button-wrapper"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium dark-mode-button css-1yxmbwk" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge dark-mode-icon css-6flbmm" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="DarkModeIcon"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"></path></svg></button></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/DML_AI2/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-cd840d73727c2e366b63.js"],"app":["/app-5199f4bcb719e25b45ed.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-3c26d4b7e3608ed0ece4.js"],"component---src-pages-404-js":["/component---src-pages-404-js-4917da7ef5b541e98a81.js"],"component---src-pages-about-js":["/component---src-pages-about-js-b5804eba3d16afcb3700.js"],"component---src-pages-index-js":["/component---src-pages-index-js-bc882cd03f70c89c8148.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-ef83b594aa693e649d30.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-fea460fedd50cffb10cd.js"]};/*]]>*/</script><script src="/polyfill-cd840d73727c2e366b63.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-ef83b594aa693e649d30.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-3528d048b96f92ca0d99.js" async=""></script><script src="/app-5199f4bcb719e25b45ed.js" async=""></script><script src="/framework-0e1bf37de02f7cef2174.js" async=""></script><script src="/webpack-runtime-5e4100c8c88d26cea74d.js" async=""></script></body></html>
