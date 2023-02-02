@@ -733,3 +733,6 @@ temp/len(y_test)  # Accuracy
 
 
 일단 epoch 해봣으니 결과값도 이렇게 도출이 된다.
+
+```toc
+```
