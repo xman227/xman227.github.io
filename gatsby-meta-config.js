@@ -9,9 +9,9 @@ module.exports = {
         repo: '' // zoomkoding/zoomkoding-gatsby-blog
     },
   },
-  comments: {
+  comments: { 
     utterances: {
-      repo: ``, // `zoomkoding/zoomkoding-gatsby-blog`,
+      repo: `xman227/blog_comments`, // `zoomkoding/zoomkoding-gatsby-blog`,
     },
   },
   ga: '0', // Google Analytics Tracking ID

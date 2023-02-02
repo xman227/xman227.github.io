@@ -4,7 +4,7 @@ title: NLP 전처리 필수 Vecorize
 date: '2022-03-25 23:00:00'
 author: 하성민
 tags: blog gatsby theme 개츠비 테마
-categories: 회고
+categories: NLP
 ---
 
 
