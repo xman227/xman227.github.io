@@ -9,7 +9,7 @@ categories: DeepML
 
 
 
-# 🌠 Tensor flow V2 라이브러리를 이용해 딥러닝 모델 생성하기
+## 1. 🌠 Depp Learning 모델 생성 방법 세가지
 
 
 Tensor flow V2 버전에서 딥러닝 모델 작성 방법에는 크게 3가지가 있다.
@@ -25,7 +25,7 @@ Tensor flow V2 버전에서 딥러닝 모델 작성 방법에는 크게 3가지�
 
 
 
-## 1. Sequential Model
+### 1. Sequential Model  
 
 
 ```python
@@ -48,12 +48,10 @@ model = keras.Sequential() 을 활용하면
 
 입력부터 출력까지 순차적(시퀀셜) 으로 add 하면 된다.
 
-#### but,
-
-모델의 입력과 출력이 여러개인 경우에는 적합하지 않다.  
+but, 모델의 입력과 출력이 여러개인 경우에는 적합하지 않다.  
 (반드시 입력 1개 출력 1가지 여야 함)
 
-## 2. Functional API
+### 2. Functional API
 
 
 ```python
@@ -80,7 +78,7 @@ model 에 ketas.Model 이 들어간다.
 레이어의 그래프를 bulid 한다는 뜻이다.
 
 
-## 3. Subclassing
+### 3. Subclassing
 
 
 ```python
@@ -105,9 +103,8 @@ model = CustomModel()
 model.fit(x,y, epochs=10, batch_size=32)
 ```
 
-제일 자유로운 모델링이 가능한 subclassing
-
-# 이를 바탕으로 직접 구현해보자
+제일 자유로운 모델링이 가능한 subclassing  
+이를 바탕으로 직접 구현해보자
 
 
 ```python
@@ -136,7 +133,8 @@ print(len(x_train), len(x_test))
     60000 10000
 
 
-## 1. Sequential model
+## 2. 실제 구현
+### 1. Sequential model
 
 
 ```python
@@ -209,7 +207,7 @@ model.evaluate(x_test,  y_test, verbose=2)
 
 
 
-## 2. Functional API
+### 2. Functional API
 
 
 ```python
@@ -278,7 +276,7 @@ model.evaluate(x_test,  y_test, verbose=2)
 
 
 
-## 3. Subclassing API
+### 3. Subclassing API
 
 keras.models 를 상속받는 클래스를 만드는 것
 
@@ -357,9 +355,9 @@ input 을 따로 설정안하고
 
 
 ---
-# CIFAR -100 데이터 예제로 복습
+## 3. CIFAR -100 데이터 예제 사용하기
 
-### Sequential
+### 1. Sequential
 
 
 ```python
@@ -430,7 +428,7 @@ model.evaluate(x_test,  y_test, verbose=2)
 
 
 
-### Functional
+### 2. Functional
 
 
 ```python
@@ -485,7 +483,7 @@ model.evaluate(x_test, y_test, verbose =2)
 
 
 
-### Subclass API
+### 3. Subclass API
 
 
 ```python
