@@ -19,7 +19,7 @@ categories: python
 
 - 행렬 + 행렬
 
-![Untitled](./imgs/1.png.png)
+![Untitled](./imgs/1.png)
 
 - 스칼라 * 행렬
 
@@ -93,7 +93,7 @@ R 은 실수(real)
 
 **linspace()함수에서는 구간의 개수를 지정**
 
-![Untitled](./imgs/10.png.png)
+![Untitled](./imgs/10.png)
 
 arrange 는 어느 step 만큼 수를 키울 것인지 를 파라미터로 받는다
 
