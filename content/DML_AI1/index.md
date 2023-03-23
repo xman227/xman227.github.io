@@ -4,7 +4,7 @@ title: 인공지능 기초 사진 분류 프로그램 맛보기
 date: '2022-04-21 23:00:00'
 author: 하성민
 tags: blog gatsby theme 개츠비 테마
-categories: beginner
+categories: STUDY
 ---
 
 

@@ -4,7 +4,7 @@ title: NLP 에서 데이터 전처리 및 토큰화란
 date: '2022-03-15 23:00:00'
 author: 하성민
 tags: blog gatsby theme 개츠비 테마
-categories: NLP
+categories: STUDY
 ---
 
 # 

@@ -4,7 +4,7 @@ title: Keras 딥러닝 모델
 date: '2022-04-21 23:10:00'
 author: 하성민
 tags: blog gatsby theme 개츠비 테마
-categories: DeepML
+categories: STUDY
 ---
 
 

@@ -4,7 +4,7 @@ title: 추천시스템
 date: '2022-02-21 23:00:00'
 author: 하성민
 tags: blog gatsby theme 개츠비 테마
-categories: DeepML
+categories: STUDY
 ---
 
 #  🤴 Deep Learning 이용 분야  - 추천 시스템

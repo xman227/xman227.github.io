@@ -4,7 +4,7 @@ title: 임베딩이란
 date: '2022-04-21 23:00:00'
 author: 하성민
 tags: blog gatsby theme 개츠비 테마
-categories: NLP
+categories: STUDY
 ---
 
 # <span style='background-color: #fff5b1'>임베딩이란..?</span>

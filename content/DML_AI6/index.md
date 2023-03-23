@@ -4,7 +4,7 @@ title: 정보 이론에 대해서
 date: '2022-05-22 23:15:00'
 author: 하성민
 tags: blog gatsby theme 개츠비 테마
-categories: DeepML
+categories: STUDY
 ---
 
 # 정보이론 Information Theory

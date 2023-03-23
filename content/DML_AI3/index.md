@@ -4,7 +4,7 @@ title: Regression 회귀
 date: '2022-04-18 23:00:00'
 author: 하성민
 tags: blog gatsby theme 개츠비 테마
-categories: beginner
+categories: STUDY
 ---
 
 # <span style='background-color: #aaf5b1'>선형회귀</span>

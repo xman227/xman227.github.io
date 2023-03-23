@@ -4,7 +4,7 @@ title: 파이썬으로 딥러닝 모델 제작하기
 date: '2022-02-19 23:00:00'
 author: 하성민
 tags: blog gatsby theme 개츠비 테마
-categories: DeepML
+categories: STUDY
 ---
 
 

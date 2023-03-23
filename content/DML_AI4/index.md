@@ -4,7 +4,7 @@ title: 인공지능 기초 레이어 이해하기
 date: '2022-04-21 23:13:00'
 author: 하성민
 tags: blog gatsby theme 개츠비 테마
-categories: beginner
+categories: STUDY
 ---
 
 # <span style='background-color: #fff5b1'>딥러닝 네트워크를 구성하는 레이어, 이게 뭘까?</span>

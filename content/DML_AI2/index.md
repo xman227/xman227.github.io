@@ -4,7 +4,7 @@ title: VGG16
 date: '2022-04-21 23:00:00'
 author: 하성민
 tags: blog gatsby theme 개츠비 테마
-categories: beginner
+categories: STUDY
 ---
 
 

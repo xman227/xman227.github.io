@@ -4,7 +4,7 @@ title: pre-trained 모델 가져오는 링크
 date: '2022-04-21 23:11:00'
 author: 하성민
 tags: blog gatsby theme 개츠비 테마
-categories: DeepML
+categories: STUDY
 ---
 
 # <span style='background-color: #fff5b1'>미리 학습된 딥러닝 Pre-trained  Deep Learning 사용처</span>

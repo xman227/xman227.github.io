@@ -4,7 +4,7 @@ title: 활성화 함수란?
 date: '2022-05-20 23:15:00'
 author: 하성민
 tags: blog gatsby theme 개츠비 테마
-categories: DeepML
+categories: STUDY
 ---
 
 # <span style='background-color: #fff5b1'>활성화함수, 데이터를 죽여살려? </span>

@@ -4,7 +4,7 @@ title: EDA 라이브러리 사용법
 date: '2022-04-19 23:00:00'
 author: 하성민
 tags: blog gatsby theme 개츠비 테마
-categories:  DeepML
+categories:  STUDY
 ---
 
 

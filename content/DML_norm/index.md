@@ -4,7 +4,7 @@ title: 정규화 정칙화 차이
 date: '2022-04-21 23:15:00'
 author: 하성민
 tags: blog gatsby theme 개츠비 테마
-categories: DeepML
+categories: STUDY
 ---
 
 # <span style='background-color: #fff5b1'>정규화(라고 다같은 정규화가 아니다)</span>

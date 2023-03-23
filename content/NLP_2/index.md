@@ -4,7 +4,7 @@ title: SentencePiece Tokenizer 사용 방법
 date: '2022-03-23 23:00:00'
 author: 하성민
 tags: blog gatsby theme 개츠비 테마
-categories: NLP
+categories: STUDY
 ---
 
 
