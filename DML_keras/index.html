@@ -609,13 +609,9 @@ fit 메서드를 풀어 쓴 것이다.</p>
 <div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">prediction <span class="token operator">=</span> model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>x_test<span class="token punctuation">,</span> batch_size<span class="token operator">=</span>x_test<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
 temp <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>squeeze<span class="token punctuation">(</span>y_test<span class="token punctuation">)</span> <span class="token operator">==</span> np<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span>prediction<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 temp<span class="token operator">/</span><span class="token builtin">len</span><span class="token punctuation">(</span>y_test<span class="token punctuation">)</span>  <span class="token comment"># Accuracy</span></code></pre></div>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">1/1 [==============================] - 1s 822ms/step
-
-
-
-
-
-0.346</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">1/1 [==============================] - 1s 822ms/step</code></pre></div>
+<p>git push -u origin my-branch-xman227</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">0.346</code></pre></div>
 <p>일단 epoch 해봣으니 결과값도 이렇게 도출이 된다.</p>
 <div class="table-of-contents">
 <ul>
